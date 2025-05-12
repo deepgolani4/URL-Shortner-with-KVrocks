@@ -1,6 +1,6 @@
 # URL Shortener Service
 
-A  URL shortener service built with Go and Redis (Kvrocks) that allows users to create shortened URLs with optional custom IDs and expiration times.
+A  URL shortener service built with Go and Kvrocks that allows users to create shortened URLs with optional custom IDs and expiration times.
 
 ## Setup and Running
 
