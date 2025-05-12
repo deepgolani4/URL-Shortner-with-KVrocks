@@ -1,0 +1,24 @@
+services:
+  api:
+    env_file:
+      - ./api/.env
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+  db:
+    image: apache/kvrocks:latest
+    ports:
+      - "6379:6666"
+    volumes:
+      - type: bind
+        source: ./data
+        target: /data
+        bind:
+          create_host_path: true
+networks:
+  default:
+    name: url-shortner
